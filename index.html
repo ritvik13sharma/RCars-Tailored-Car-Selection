@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RCars</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500&family=Dancing+Script:wght@700&family=Lobster&family=Montserrat:wght@100&family=Oswald&family=Roboto+Condensed:wght@300&family=Russo+One&family=The+Nautigal:wght@700&family=Ubuntu:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" data-bs-theme="dark">
+          <div class="container-fluid">
+            <a class="navbar-brand fs-3" href="#" style="font-family: 'Lobster','cursive';">RCars</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/add_data.html">Add</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/edit_data.html">Edit</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/delete_data.html">Delete</a>
+                </li>
+                
+              </ul>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="text" placeholder="Search Cars" aria-label="Search" id="navsearch">
+                <button class="btn btn-outline-success" type="submit" id="s5">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+       <!-- Carousel -->
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://source.unsplash.com/1400x500/?BMW cars" class="d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>" The cars we drive say a lot about us. "</h5>
+              <p>~ Alexander Paul</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/1400x500/?BMW ,Mercedes" class="d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>" All of those cars were once just a dream in someone's head "</h5>
+              <p>~ Mario Lopez</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://source.unsplash.com/1400x500/?Audi,BMW" class="d-block w-100 img-fluid" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>" Men always speak of three things - Women, Sports and Cars "</h5>
+              <p>~ Peter Gabriel</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <!-- Search Box -->
+
+      <div class="container">
+        <main>
+          <div class="py-5 text-center">
+            <h2>Search for the car that suits you the best.</h2>
+            <p class="lead">R Cars gives you the ability to find the best car based on the needs of your family. You can search for cars based on a number filters to find the perfect combination of sportiness, luxury, and comfort.</p>
+          </div>
+      
+          <div class="row g-5">
+            <div class="col-md-12 col-lg-12">
+              <form class="needs-validation" id="form1">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="make" class="form-label">Make</label>
+                    <select class="form-select" id="make" >
+                        <option value="">Choose...</option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Hyundai">Hyundai</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Jeep">Jeep</option>
+                        <option value="Land-Rover">Land-Rover</option>
+                        <option value="Lamborghini">Lamborghini</option>
+                        <option value="Maruti-Suzuki">Maruti-Suzuki</option>
+                        <option value="Mahindra">Mahindra</option>
+                        <option value="Mercedes-Benz">Mercedes-Benz</option>
+                        <option value="Skoda">Skoda</option>
+                        <option value="Tata">Tata</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Volkswagen">Volkswagen</option>
+
+                    </select>
+                    <div class="invalid-feedback">
+                      Valid Make is required.
+                    </div>
+                  </div>
+      
+                  <div class="col-sm-6">
+                    <label for="model" class="form-label">Model</label>
+                    <select class="form-select" id="model" >
+                        <option value="">Choose...</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Valid Model is required.
+                    </div>
+                  </div>
+            
+                  <div class="col-md-6 my-3">
+                    <label for="country" class="form-label">Year</label>
+                    <select class="form-select" id="year" required>
+                      <option value="">Choose...</option>
+                      <option value="2021-Present">2021-Present</option>
+                      <option value="2016-2020">2016-2020</option>
+                      <option value="2011-2015">2011-2015</option>
+                      <option value="2006-2010">2006-2010</option>
+                      <option value="2000-2005">2000-2005</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid year.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 my-3"> <!--Write script for this-->
+                    <label for="prange" class="form-label">Price</label>
+                    <select class="form-select" id="prange" required>
+                      <option value="">Choose...</option>
+                      <option value="2021-Present">0 - 5 Lakhs</option>
+                      <option value="2016-2020">5 - 10 Lakhs</option>
+                      <option value="2011-2015">10 - 15 Lakhs</option>
+                      <option value="2006-2010">15 - 20 Lakhs</option>
+                      <option value="2000-2005">20 - 25 Lakhs</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please select a valid Price Range.
+                    </div>
+                  </div>
+                  
+                </div>
+
+                <label for="filters" class="form-label my-4">Filters</label>
+                <div class="d-flex flex-row justify-content-between">
+
+                    <div><input type="checkbox" id="suv" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1">SUV</label><br></div>
+
+                    <div><input type="checkbox" id="sedan" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1">Sedan</label><br></div>
+
+                    <div><input type="checkbox" id="wagon" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1">Wagon</label><br></div>
+
+                    <div><input type="checkbox" id="hatch" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1"> Hatch</label><br></div>
+
+                    <div><input type="checkbox" id="conv" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1">Convertible</label><br></div>
+
+                    <div><input type="checkbox" id="petrol" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1"> Petrol</label><br></div>
+
+                    <div><input type="checkbox" id="diesel" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1"> Diesel</label><br></div>
+                    
+                    <div><input type="checkbox" id="electric" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1"> Electric</label><br></div>
+
+                    <div><input type="checkbox" id="hybrid" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1"> Hybrid</label><br></div>
+
+                    <div><input type="checkbox" id="cng" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1"> CNG</label><br></div>
+
+                    <div><input type="checkbox" id="safety-first" name="vehicle1" value="Yes" class="re">
+                    <label for="vehicle1"> Safety-first</label><br></div>
+
+                </div>
+
+      
+                <button class="ml-5 mr-5 w-100 btn btn-primary btn-lg mt-5" id="sub" type="submit">Search</button>
+
+              </form>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- Search Results -->
+
+      <h2 class="text-center mt-5" id="Ress">Most Trending</h2>
+
+      <div class="album py-5 bg-body-tertiary">
+        <div class="container" id="resholder">
+    
+          <div class="card mb-5" >
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img src="https://prog-ace-cdn.azureedge.net/-/media/project/mahindra/dotcom/mahindra/dark-theme-mahindra-images/gallery/xuv700/photos/popup-images/big01.jpg?rev=77a9d625ccc142068357cecd332b2625&extension=webp" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="card-title">Mahindra XUV700</h5><br>
+                  <p class="card-text"><strong>Price : &#8377; 15,23,867 - &#8377; 24,96,211 </strong>
+                  </p>
+                  <p class="card-text">Petrol</p>
+                  <p class="card-text">Safety Rating : 5</p>
+                  <p class="card-text">Sports Utility Vehile</p>
+                  <p class="card-text">2021 - Present</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 1 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-5" >
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img src="https://www.hyundai.com/content/dam/hyundai/in/en/data/find-a-car/Grand-i10-Nios/Gallery%20Section/big/pc/niosgallery_3.jpg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="card-title">Hyundai i10</h5><br>
+                  <p class="card-text"><strong>Price : &#8377; 5,20,319 - &#8377; 9,26,211 </strong>
+                  </p>
+                  <p class="card-text">Petrol</p>
+                  <p class="card-text">Safety Rating : 3</p>
+                  <p class="card-text">Hatch</p>
+                  <p class="card-text">2021 - Present</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 1 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mb-5" >
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img src="https://prog-ace-cdn.azureedge.net/-/media/project/mahindra/dotcom/mahindra/dark-theme-mahindra-images/gallery/testz101/photos/popup-images/z101_4-1920x1080.jpg?rev=d27d4f004d204964a1a5f95f63d8a9e2&extension=webp" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                    <h5 class="card-title">Mahindra Scorpio N</h5><br>
+                    <p class="card-text"><strong>Price : &#8377; 15,83,867 - &#8377; 28,34,211 </strong>
+                    </p>
+                    <p class="card-text">Petrol</p>
+                    <p class="card-text">Safety Rating : 5</p>
+                    <p class="card-text">Sports Utility Vehile</p>
+                    <p class="card-text">2021 - Present</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 1 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+
+      <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+        <p class="mb-1">&copy; 2017–2023 R Cars</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Privacy</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script src="/render.js"></script>
+  </body>
+</html>
